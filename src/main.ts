@@ -17,5 +17,5 @@ export const createApp = ViteSSG(
     app.use(store);
     app.component('SvgIcon', SvgIconComponent);
   },
-  { rootContainer: 'app-mount' }
+  { rootContainer: '#app-mount' }
 );
