@@ -10,6 +10,7 @@ import svgIcon from './plugin/svgIcon';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.BASE_URL,
   plugins: [vue(), svgIcon()],
   resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
   build: {
