@@ -32,5 +32,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user_name: GitHub Action
           user_email: action@github.com
-          commit_message: build-${{ github.event.head_commit.message }}
+          commit_message: build ${{ github.event.head_commit.message }}
           # cname:
