@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: yarn build
         env:
-          VITE_BASE: ${{ secrets.VITE_BASE }}
+          BASE_URL: ${{ secrets.VITE_BASE }}
 
       # use https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-enable-built-in-jekyll-enable_jekyll
       - name: Deploy
