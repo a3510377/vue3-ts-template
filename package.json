@@ -1,0 +1,49 @@
+{
+  "name": "vue3-ts-pinia-vue_router",
+  "private": true,
+  "version": "0.0.0",
+  "repository": "https://github.com/a3510377/vue3-ts-pinia-vue_router.git",
+  "author": "猴子 <70706886+a3510377@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc --noEmit && vite-ssg build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{js,jsx,vue,ts,tsx}' --fix",
+    "lint:stylelint": "stylelint src/**/*.{vue,css,scss} --fix"
+  },
+  "dependencies": {
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "pinia": "^2.0.14",
+    "vite": "^2.9.12",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-ssg": "^0.20.2",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vueuse/head": "^0.7.6",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.1.1",
+    "postcss-html": "^1.4.1",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.7.1",
+    "sass": "^1.52.3",
+    "stylelint": "^14.9.1",
+    "stylelint-config-html": "^1.0.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0",
+    "typescript": "^4.7.4",
+    "vue-tsc": "^0.38.5"
+  }
+}
