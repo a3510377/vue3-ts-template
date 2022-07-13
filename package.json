@@ -1,8 +1,8 @@
 {
-  "name": "vue3-ts-pinia-vue_router",
+  "name": "vue3-ts-template",
   "private": true,
   "version": "0.0.0",
-  "repository": "https://github.com/a3510377/vue3-ts-pinia-vue_router.git",
+  "repository": "https://github.com/a3510377/vue3-ts-template",
   "author": "猴子 <70706886+a3510377@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
