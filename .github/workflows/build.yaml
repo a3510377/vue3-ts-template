@@ -27,7 +27,7 @@ jobs:
       - name: deploy
         run: |
           cd dist
-          ln -s index.html 404.html
+          [ -f 404.html ] || ln -s index.html 404.html
           if [ "none" !=  "$cname" ]; then echo "$cname" > CNAME; fi
           git config --global user.name "$user_name"
           git config --global user.email "$user_email"
