@@ -34,9 +34,11 @@ jobs:
           git init
           git add -A
           git commit -m "${{ github.event.head_commit.message }}"
-          git push -f https://"$user_name":${{ secrets.GITHUB_TOKEN }}@github.com/"$user_name"/${{ github.event.repository.name }}.git master:gh-pages
+          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.event.repository.full_name }}.git master:gh-pages
         shell: bash
         env:
           user_name: GitHub Action
           user_email: action@github.com
           cname: none
+# git push -f https://${{ inputs.username }}:${{ inputs.token }}@github.com/${{ inputs.username }}/${{ inputs.reponame }}.git master:gh-pages
+# git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.event.repository.full_name }}.git master:gh-pages
