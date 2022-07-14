@@ -20,11 +20,12 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: |
-          yarn build
-          ln -s ./dist/index.html ./dist/404.html
+        run: yarn build
         env:
           BASE_URL: ${{ secrets.VITE_BASE }}
+
+      - name: create 404
+        run: ln -s ./dist/index.html ./dist/404.html
 
       # use https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-enable-built-in-jekyll-enable_jekyll
       - name: Deploy
