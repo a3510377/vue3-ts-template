@@ -26,6 +26,7 @@ jobs:
 
       - name: deploy
         run: |
+          echo @github.com/${{ github.event.repository.full_name }}.git master:gh-pages
           cd dist
           ln -s index.html 404.html
           if [ "none" !=  "$cname" ]; then echo "$cname" > CNAME; fi
