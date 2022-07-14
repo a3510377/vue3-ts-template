@@ -24,9 +24,6 @@ jobs:
         env:
           BASE_URL: ${{ secrets.VITE_BASE }}
 
-      - name: Deploy
-        run: ln -s ./dist/index.html ./dist/404.html
-
       - name: deploy
         run: |
           cd dist
