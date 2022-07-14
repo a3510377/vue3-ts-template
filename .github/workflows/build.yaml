@@ -17,23 +17,29 @@ jobs:
           node-version: '16.x'
 
       - name: Install
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Build
         run: yarn build
         env:
           BASE_URL: ${{ secrets.VITE_BASE }}
 
-      - name: create 404
+      - name: Deploy
         run: ln -s ./dist/index.html ./dist/404.html
 
-      # use https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-enable-built-in-jekyll-enable_jekyll
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./dist
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: deploy
+        run: |
+          cd dist
+          ln -s index.html 404.html
+          if [ "none" !=  "$cname" ]; then echo "$cname" > CNAME; fi
+          git config --global user.name "$user_name"
+          git config --global user.email "$user_email"
+          git init
+          git add -A
+          git commit -m "${{ github.event.head_commit.message }}"
+          git push -f https://"$user_name":${{ secrets.GITHUB_TOKEN }}@github.com/"$user_name"/${{ github.event.repository.name }}.git master:gh-pages
+        shell: bash
+        env:
           user_name: GitHub Action
           user_email: action@github.com
-          commit_message: build ${{ github.event.head_commit.message }}
-          # cname:
+          cname: none
