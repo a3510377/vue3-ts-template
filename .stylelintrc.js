@@ -18,12 +18,13 @@ module.exports = {
       true,
       { ignorePseudoElements: ['v-deep', 'v-global'] },
     ],
-    'at-rule-no-unknown': [
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': [
       true,
       { ignoreAtRules: ['extend', 'include', 'mixin'] },
     ],
-
-    'function-no-unknown': [true, { ignoreFunctions: ['/v-bind/'] }],
+    'function-no-unknown': null,
+    'scss/function-no-unknown': [true, { ignoreFunctions: ['/v-bind/'] }],
     'no-invalid-position-at-import-rule': null,
     'selector-id-pattern': null,
     'no-empty-source': null,
