@@ -2,6 +2,12 @@
 
 A development template for vue3 + vue-router + pinia + typescript + vite-ssg
 
+## Installation
+
+```shell
+npx degit a3510377/vue3-ts-template <your new project name>
+```
+
 ## init
 
 ```shell
