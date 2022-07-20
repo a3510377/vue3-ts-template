@@ -1,40 +1,35 @@
 <template>
-  <svg v-once aria-hidden="true" class="svg-icon-spin" :class="svgIcon">
-    <use :xlink:href="symbolId" :fill="color" />
+  <svg v-once aria-hidden="true" class="svg-icon-spin">
+    <use :xlink:href="symbolId" :fill="color" :color="color" />
   </svg>
 </template>
 
 <script lang="ts" setup>
-import { computed, reactive } from 'vue';
+import { computed } from 'vue';
+// eslint-disable-next-line vue/no-setup-props-destructure
+const {
+  name,
+  prefix = 'icon',
+  width: propsWidth,
+  height: propsHeight,
+  size,
+} = defineProps<{
+  name: string;
+  prefix?: string;
+  color?: string;
+  size?: string;
+  width?: string;
+  height?: string;
+}>();
 
-const props = defineProps({
-  prefix: { type: String, default: 'icon' },
-  name: { type: String, required: true },
-  color: { type: String, default: '#ccc' },
-  size: { type: String, default: 'default' },
-});
-const symbolId = computed(() => `#${props.prefix}-${props.name}`);
-const svgIcon = computed(() => ({
-  [`img-svg-size-${props.size}`]: props.size,
-}));
-const fontSize = reactive({ default: '32px', small: '20px', large: '48px' });
+const symbolId = computed(() => `#${prefix}-${name}`);
+const width = propsWidth ?? size ?? '32px';
+const height = propsHeight ?? size ?? '32px';
 </script>
 <style lang="scss" scoped>
 .svg-icon-spin {
-  width: v-bind('fontSize.default');
-  height: v-bind('fontSize.default');
-  color: v-bind(color);
+  width: v-bind('width');
+  height: v-bind('height');
   vertical-align: middle;
-  fill: v-bind(color);
-
-  &.img-svg-size-small {
-    height: v-bind('fontSize.small');
-    font-size: v-bind('fontSize.small');
-  }
-
-  &.img-svg-size-large {
-    height: v-bind('fontSize.large');
-    font-size: v-bind('fontSize.large');
-  }
 }
 </style>
