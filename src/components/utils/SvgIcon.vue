@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
+
 // eslint-disable-next-line vue/no-setup-props-destructure
 const {
   name,
