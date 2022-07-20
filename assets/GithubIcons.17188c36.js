@@ -1,0 +1,1 @@
+import{_ as a,r as s,o,c as r,g as c,e,F as n}from"./app.5b2c6eac.js";var t=a({},[["render",function(a,t){const l=s("SvgIcon");return o(),r(n,null,c(4,(a=>e(l,{name:"github-24x24",color:"#000",class:"logo"}))),64)}],["__scopeId","data-v-24764826"]]);export{t as default};
