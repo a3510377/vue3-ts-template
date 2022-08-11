@@ -23,6 +23,7 @@ jobs:
         run: yarn build
         env:
           BASE_URL: ${{ secrets.VITE_BASE }}
+          HOSTNAME: ${{ secrets.HOSTNAME }}
 
       - name: deploy
         run: |
