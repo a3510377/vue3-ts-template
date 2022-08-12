@@ -1,0 +1,46 @@
+{
+  "vite/modulepreload-polyfill": [],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/vue-router/dist/vue-router.esm-bundler.js": [],
+  "node_modules/@vueuse/head/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/chunks/state.mjs": [],
+  "node_modules/vite-ssg/dist/chunks/ClientOnly.mjs": [],
+  "node_modules/vite-ssg/dist/index.mjs": [],
+  "virtual:svg-icons-register": [],
+  "vite/preload-helper": [],
+  "src/router/index.ts": [],
+  "src/scss/main.scss": [],
+  "node_modules/vue-demi/lib/index.mjs": [],
+  "node_modules/pinia/dist/pinia.esm-browser.js": [],
+  "src/stores/index.ts": [],
+  "plugin-vue:export-helper": [],
+  "src/layouts/default.vue": [],
+  "src/components/utils/SvgIcon.vue?vue&type=style&index=0&scoped=true&lang.scss": [],
+  "src/components/utils/SvgIcon.vue": [],
+  "src/components/utils/GeneralHead.vue": [],
+  "src/main.ts": [],
+  "index.html": [],
+  "src/stores/modules/app.ts": [
+    "/vue3-ts-template/assets/HomePage.f5098778.js",
+    "/vue3-ts-template/assets/HomePage.340692c7.css"
+  ],
+  "src/components/home/GithubIcons.vue?vue&type=style&index=0&scoped=true&lang.scss": [
+    "/vue3-ts-template/assets/HomePage.f5098778.js",
+    "/vue3-ts-template/assets/HomePage.340692c7.css"
+  ],
+  "src/components/home/GithubIcons.vue": [
+    "/vue3-ts-template/assets/HomePage.f5098778.js",
+    "/vue3-ts-template/assets/HomePage.340692c7.css"
+  ],
+  "src/views/HomePage.vue?vue&type=style&index=0&scoped=true&lang.scss": [
+    "/vue3-ts-template/assets/HomePage.f5098778.js",
+    "/vue3-ts-template/assets/HomePage.340692c7.css"
+  ],
+  "src/views/HomePage.vue": [
+    "/vue3-ts-template/assets/HomePage.f5098778.js",
+    "/vue3-ts-template/assets/HomePage.340692c7.css"
+  ]
+}

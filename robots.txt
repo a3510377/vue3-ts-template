@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a3510377.github.io/vue3-ts-template/sitemap.xml
