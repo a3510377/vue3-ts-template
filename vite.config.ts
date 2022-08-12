@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'url';
 
 import vue from '@vitejs/plugin-vue';
+import { generateSitemap } from 'sitemap-ts';
 
 import svgIcon from './plugin/svgIcon';
 
@@ -25,12 +26,19 @@ export default defineConfig({
     minify: 'terser',
     // Speed up packing
     brotliSize: false,
-    chunkSizeWarningLimit: 2000,
   },
   ssgOptions: {
     rootContainerId: 'app-mount',
     formatting: 'minify',
     dirStyle: 'nested',
     script: 'async',
+    onFinished() {
+      if (process.env.HOSTNAME) {
+        generateSitemap({
+          hostname: process.env.HOSTNAME,
+          robots: [{ userAgent: '*', allow: '/' }],
+        });
+      }
+    },
   },
 });
