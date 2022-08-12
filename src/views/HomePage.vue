@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue';
 import { useAppStore } from '@/stores/modules/app';
 
-const GithubIcons = defineAsyncComponent(
-  () => import('@/components/home/GithubIcons.vue')
-);
+import GithubIcons from '@/components/home/GithubIcons.vue';
 
 const appStore = useAppStore();
 
@@ -20,6 +17,7 @@ const technologies = [
 </script>
 
 <template>
+  <GeneralHead />
   <div class="home-page">
     <SvgIcon name="vueLogo" class="vue-logo" />
     <ul class="technologies">

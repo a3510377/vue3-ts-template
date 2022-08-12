@@ -1,6 +1,6 @@
 # vue3-ts-template
 
-A development template for vue3 + vue-router + pinia + typescript + vite-ssg
+A development template for vue3 + vue-router + pinia + typescript + vite-ssg + @vueuse/head
 
 ## Installation
 
@@ -43,3 +43,4 @@ set github Environment secrets
 - [Pinia](https://pinia.vuejs.org/)
 - [vite-ssg](https://github.com/antfu/vite-ssg)
 - [Typescript](https://www.typescriptlang.org/)
+- [@vueuse/head](https://github.com/vueuse/head)
